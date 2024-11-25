@@ -28,3 +28,5 @@ go.work.sum
 test.*
 testbots.*
 
+mm-channel-users_*
+

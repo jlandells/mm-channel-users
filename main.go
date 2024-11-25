@@ -234,7 +234,7 @@ func outputCSV(users []User, filename string) error {
 	if filename != "" {
 		file, err = os.Create(filename)
 		if err != nil {
-			errorMessage := fmt.Sprintf("failed to create file: %w", err)
+			errorMessage := fmt.Sprintf("failed to create file: %v", err)
 			LogMessage(errorLevel, errorMessage)
 			return err
 		}
@@ -265,7 +265,7 @@ func outputCSV(users []User, filename string) error {
 			user.Nickname,
 		}
 		if err := writer.Write(row); err != nil {
-			errorMessage := fmt.Sprintf("failed to write CSV row: %w", err)
+			errorMessage := fmt.Sprintf("failed to write CSV row: %v", err)
 			LogMessage(errorLevel, errorMessage)
 			return err
 		}
